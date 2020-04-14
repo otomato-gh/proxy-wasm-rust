@@ -1,0 +1,15 @@
+[package]
+name = "envoy-wasm-rs"
+version = "0.1.0"
+authors = ["Anton Weiss <anton@otomato.io>"]
+edition = "2018"
+
+[lib]
+name = "myenvoyfilter"
+crate-type = ["cdylib"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+proxy-wasm = "0.1.0"
+log = "0.4"
+primes = "0.3.0"

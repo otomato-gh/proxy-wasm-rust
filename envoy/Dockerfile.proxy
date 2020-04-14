@@ -1,0 +1,3 @@
+FROM istio/proxyv2:1.5.0
+#FROM yskopets/envoy-wasm:64d91b2
+ENTRYPOINT /usr/local/bin/envoy -c /etc/envoy.yaml -l debug --service-cluster proxy 
