@@ -38,15 +38,4 @@ impl HttpContext for PrimeAuthorizer {
             }
         }
     }
-
-    fn on_http_response_headers(&mut self, _: usize) -> Action {
-        for (name, value) in &self.get_http_response_headers() {
-            trace!("#{} <- {}: {}", self.context_id, name, value);
-        }
-        Action::Continue
-    }
-
-    fn on_log(&mut self) {
-        trace!("#{} completed.", self.context_id);
-    }
 }
