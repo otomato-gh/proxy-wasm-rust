@@ -24,7 +24,7 @@ impl HttpContext for PrimeAuthorizer {
         }
 
         match self.get_http_request_header("token") {
-            Some(token) if is_prime(token.parse().unwrap()) => {
+            Some(token) if token.parse::<u64>().is_ok() && is_prime(token.parse().unwrap()) => {
                 self.resume_http_request();
                 Action::Continue
             }
