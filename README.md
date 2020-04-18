@@ -23,4 +23,4 @@ curl  -H "token":"32323" 0.0.0.0:18000
 "Welcome to WASM land"
 ```
 
-
+Read this [blog post](https://antweiss.com/blog/extending-envoy-with-wasm-and-rust/) for more details on Envoy, WASM and Rust.
