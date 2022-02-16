@@ -7,7 +7,7 @@ The filter is ready to be built and verified with the enclosed docker-compose en
 ## Building and running:
 
 1. clone this repo
-2. `cargo +nightly build --target=wasm32-unknown-unknown --release`
+2. `cargo build --target=wasm32-unknown-unknown --release`
 3. `docker-compose up --build`
 
 ## What the Filter Does

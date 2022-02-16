@@ -10,6 +10,6 @@ crate-type = ["cdylib"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-proxy-wasm = "0.1.0"
+proxy-wasm = "0.1.4"
 log = "0.4"
 primes = "0.3.0"

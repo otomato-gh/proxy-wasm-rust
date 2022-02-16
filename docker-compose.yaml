@@ -1,6 +1,5 @@
 version: '2'
 services:
-
   proxy:
     build:
       context: ./envoy
@@ -8,8 +7,6 @@ services:
     volumes:
       - ./envoy/envoy.yaml:/etc/envoy.yaml
       - ./target/wasm32-unknown-unknown/release/myenvoyfilter.wasm:/etc/myenvoyfilter.wasm
-      # Uncomment this line if you want to use your own Envoy with WASM enabled.
-  #    - ./envoy/istio/envoy:/usr/local/bin/envoy
     networks:
       - envoymesh
     expose:
