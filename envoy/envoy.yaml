@@ -27,10 +27,6 @@ static_resources:
                   typed_config:
                     "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
                     config:
-                      configuration:
-                        "@type": type.googleapis.com/google.protobuf.StringValue
-                        value: |
-                          {"param":"value"}
                       name: prime_auth
                       root_id: prime_auth
                       vm_config:
