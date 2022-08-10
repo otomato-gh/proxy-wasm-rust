@@ -7,7 +7,7 @@ The filter is ready to be built and verified with the enclosed docker-compose en
 ## Building and running:
 
 1. clone this repo
-2. rustup target add wasm32-unknown-unknown
+2. rustup target add wasm32-unknown-unknown, if needed for cross compiling
 3. `cargo build --target=wasm32-unknown-unknown --release`
 4. `docker-compose up --build`
 
