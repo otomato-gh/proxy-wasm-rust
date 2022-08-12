@@ -18,7 +18,7 @@ struct PrimeAuthorizer {
 impl Context for PrimeAuthorizer {}
 
 impl HttpContext for PrimeAuthorizer {
-    fn on_http_request_headers(&mut self, _: usize) -> Action {
+    fn on_http_request_headers(&mut self, _: usize, _: bool) -> Action {
         for (name, value) in &self.get_http_request_headers() {
             trace!("In WASM : #{} -> {}: {}", self.context_id, name, value);
         }
