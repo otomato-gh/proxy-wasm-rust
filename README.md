@@ -7,8 +7,9 @@ The filter is ready to be built and verified with the enclosed docker-compose en
 ## Building and running:
 
 1. clone this repo
-2. `cargo build --target=wasm32-unknown-unknown --release`
-3. `docker-compose up --build`
+2. `rustup target add wasm32-unknown-unknown`, if needed for cross compiling
+3. `cargo build --target=wasm32-unknown-unknown --release`
+4. `docker-compose up --build`
 
 ## What the Filter Does
 Each request directed to our service needs to be authorized by sending a token which is then checked for validity by the filter. If the token is validated - the request is passed on to the service. Otherwise - 403 response is returned to the caller. 
