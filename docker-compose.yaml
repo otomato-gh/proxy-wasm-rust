@@ -17,7 +17,7 @@ services:
       - "18001:8001"
 
   web_service:
-    image: hashicorp/http-echo
+    image: otomato/http-echo
     command:
       - '-text="Welcome to WASM land"'
     networks:
